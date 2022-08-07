@@ -13,14 +13,14 @@
 
 const average = (array) => {
   let k = 0;
-  for (let i of array){
-    if (typeof i !== 'number'){
+  for (let i of array) {
+    if (typeof i !== "number") {
       return undefined;
     }
     k += i;
   }
   if (array.length !== 0) {
-    k = Math.round ((k /= array.lenght));
+    k = Math.round((k /= array.lenght));
     return k;
   }
 };
