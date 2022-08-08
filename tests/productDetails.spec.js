@@ -34,11 +34,11 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
-    expect(productDetails).toBe('function');
+    expect(productDetails).toBe(function());
     // Teste se o retorno da função é um array.
     expect(productDetails('Máscara', 'Alcool gel')).toBe('object');
     // Teste se o array retornado pela função contém dois itens dentro.
-    expect(productDetails('Máscara', 'Alcool gel')).toHaveLength(2);
+    expect(productDetails('Máscara', 'Alcool gel').length).toBe(2);
     // Teste se os dois itens dentro do array retornado pela função são objetos.
     expect(productDetails('Máscara', 'Alcool gel')[0]).toBe(Object);
     expect(productDetails('Máscara', 'Alcool gel')[1]).toBe(Object);
