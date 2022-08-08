@@ -36,16 +36,16 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se productDetails é uma função.
     expect(typeof productDetails).toBe('function');
     // Teste se o retorno da função é um array.
-    expect(typeof productDetails('first', 'second')).toBe('object');
+    expect(typeof productDetails('Máscara', 'Alcool gel')).toBe('object');
     // Teste se o array retornado pela função contém dois itens dentro.
-    expect(productDetails('f', 's')).toHaveLength(2);
+    expect(productDetails('Máscara', 'Alcool gel')).toHaveLength(2);
     // Teste se os dois itens dentro do array retornado pela função são objetos.
-    expect(productDetails('f', 's')[0]).toBeInstanceOf(Object);
-    expect(productDetails('f', 's')[1]).toBeInstanceOf(Object);
+    expect(productDetails('Máscara', 'Alcool gel')[0]).toBe(Object);
+    expect(productDetails('Máscara', 'Alcool gel')[1]).toBe(Object);
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
-    expect(productDetails('f', 's')[0]).not.toBe(productDetails('f', 's')[1]);
+    expect(productDetails('Máscara', 'Alcool gel')[0]).not.toBe(productDetails('Máscara', 'Alcool gel')[1]);
     // Teste se os dois productIds terminam com 123.
-    expect(productDetails('f', 's')[0].details.productIdObject).toMatch('123');
-    expect(productDetails('f', 's')[1].details.productIdObject).toMatch('123');
+    expect(productDetails('Máscara', 'Alcool gel')[0].details.productIdObject).toMatch('Máscara123');
+    expect(productDetails('Máscara', 'Alcool gel')[1].details.productIdObject).toMatch('Alcool gel123');
   });
 });
