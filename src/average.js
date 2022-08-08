@@ -13,6 +13,7 @@
 
 const average = (array) => {
   let k = 0;
+  let soma = 0;
   for (let i of array) {
     if (typeof i !== 'number') {
       return undefined;
@@ -20,7 +21,7 @@ const average = (array) => {
     k += i;
   }
   if (array.length !== 0) {
-    k = Math.round((k /= array.lenght));
+    k = Math.round((k /= array.length));
     return k;
   }
 };
